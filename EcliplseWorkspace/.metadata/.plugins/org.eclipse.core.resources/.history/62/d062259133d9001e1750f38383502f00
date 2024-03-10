@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+div {
+	display: flex;
+	flex-direction: row;
+}
+
+* {
+	display:flex;
+	height: 100dvh;
+	width: 100%;
+	
+}
