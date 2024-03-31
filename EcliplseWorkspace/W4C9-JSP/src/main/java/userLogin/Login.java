@@ -42,7 +42,7 @@ public class Login extends HttpServlet {
 		String correctPassword = "1234";
 		String correctEmail = "a@a.com";
 		
-		if(correctEmail.equals(email) && correctPassword.equals(password)) {
+		if(email.equals(correctEmail) && password.equals(correctPassword)) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("home");
 			dispatcher.forward(request, response);
 			

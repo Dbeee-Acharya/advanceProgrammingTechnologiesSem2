@@ -13,7 +13,7 @@
 	
 	if((message != null && !message.isEmpty())){
 		%> <p style = "color: red"> <%= message %> 
-	<%	
+	<%
 	}
 	
 	%>
