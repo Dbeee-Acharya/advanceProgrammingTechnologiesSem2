@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Student;
+import service.StudentDAO;
+import util.PasswordHashing;
 
 /**
  * Servlet implementation class studentRegister
@@ -27,6 +29,15 @@ public class studentRegister extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
+    
+    //aafai lekheko
+	private StudentDAO dao;
+	
+   @Override
+    public void init() {
+    	dao = new StudentDAO();
+    }
+
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -71,17 +82,20 @@ public class studentRegister extends HttpServlet {
 		}
 		
 		
-		Student s = new Student();
-		s.setFirstName(firstName);
-		s.setLastName(lastName);
-		s.setUserName(userName);
-		s.setDob(dob);
-		s.setGender(gender);
-		s.setEmail(email);
-		s.setPhoneNumber(phoneNumber);
-		s.setSubject(subject);
-		s.setPassword(password);
+		Student student = new Student();
+		student.setFirstName(firstName);
+		student.setLastName(lastName);
+		student.setUserName(userName);
+		student.setDob(dob);
+		student.setGender(gender);
+		student.setEmail(email);
+		student.setPhoneNumber(phoneNumber);
+		student.setSubject(subject);
+		student.setPassword(PasswordHashing.getPasswordHash(password));
 		
+		dao.SaveStudent(student);
+		
+
 	}
 
 }

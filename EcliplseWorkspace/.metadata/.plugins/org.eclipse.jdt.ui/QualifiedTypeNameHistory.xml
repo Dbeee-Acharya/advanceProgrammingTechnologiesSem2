@@ -8,13 +8,19 @@
     <fullyQualifiedTypeName name="controller.MobileController"/>
     <fullyQualifiedTypeName name="model.SmartPhone"/>
     <fullyQualifiedTypeName name="databaseController.CrudOperation"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="it.cosenonjaviste.crypto.BCrypt"/>
+    <fullyQualifiedTypeName name="util.PasswordHashing"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.BasicDataSource"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="util.DatabaseConnection"/>
     <fullyQualifiedTypeName name="model.Student"/>
+    <fullyQualifiedTypeName name="service.StudentDAO"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 </qualifiedTypeNameHistroy>
