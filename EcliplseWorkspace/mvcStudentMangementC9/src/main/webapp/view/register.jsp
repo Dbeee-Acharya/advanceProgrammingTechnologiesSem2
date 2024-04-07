@@ -12,6 +12,13 @@
 	<div class="container">
 		<h1>Registration Form</h1>
 		<form action="<%=request.getContextPath()%>/Register" method="post">
+					<%
+						if(request.getAttribute("error")!= null) {
+					%>	<p style = "color:red"><%= request.getAttribute("error") 
+					%>	</p>
+					<%
+						}
+					%>
 			<div class="row">
 				<div class="col">
 					<label for="firstName">First Name:</label> <input type="text"

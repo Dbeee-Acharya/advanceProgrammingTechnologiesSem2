@@ -20,7 +20,7 @@
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="util.DatabaseConnection"/>
     <fullyQualifiedTypeName name="model.Student"/>
-    <fullyQualifiedTypeName name="service.StudentDAO"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="service.StudentDAO"/>
 </qualifiedTypeNameHistroy>

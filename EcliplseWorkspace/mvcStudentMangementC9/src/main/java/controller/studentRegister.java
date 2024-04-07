@@ -93,7 +93,15 @@ public class studentRegister extends HttpServlet {
 		student.setSubject(subject);
 		student.setPassword(PasswordHashing.getPasswordHash(password));
 		
-		dao.SaveStudent(student);
+		boolean isSuccess = dao.saveStudent(student);
+		
+		if(isSuccess) {
+			request.getRequestDispatcher("Login").forward(request, response);
+			
+		} else {
+			request.setAttribute("error", "user already exists");
+			request.getRequestDispatcher("/view/register.jsp").forward(request, response);
+		}
 		
 
 	}

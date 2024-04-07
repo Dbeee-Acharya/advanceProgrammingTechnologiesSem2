@@ -12,7 +12,7 @@ public class DatabaseConnection {
 	static {
 		dataSource = new BasicDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		dataSource.setUrl("Mysql:jdbc://localhost:3306/mvcC9");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/mvcC9");
 		dataSource.setUsername("root");
 		dataSource.setPassword("");
 	}
