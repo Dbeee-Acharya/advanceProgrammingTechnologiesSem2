@@ -1,9 +1,12 @@
 package service;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Student;
 import util.DatabaseConnection;
@@ -111,6 +114,42 @@ public class StudentDAO {
 		}
 		
 		return userExists;
+	}
+
+	public List<Student> getAllStudent() throws SQLException {
+		// TODO Auto-generated method stub
+		statement = conn.prepareStatement("select * from student_register");
+		resultSet = statement.executeQuery();
+		
+		List<Student> listOfStudent = new ArrayList<Student>();
+		
+		while(resultSet.next()) {
+			int id = resultSet.getInt("id");
+			String firstName = resultSet.getString("firstName");
+			String lastName = resultSet.getString("lastName");
+			String userName = resultSet.getString("userName");
+			Date dob = resultSet.getDate("dob");
+			String gender = resultSet.getString("gender");
+			String email = resultSet.getString("email");
+			Long phoneNumber = resultSet.getLong("phoneNumber");
+			String subject = resultSet.getString("subject");
+			
+			Student student = new Student();
+			
+			student.setFirstName(firstName);
+			student.setLastName(lastName);
+			student.setUserName(userName);
+			student.setDob(dob);
+			student.setGender(gender);
+			student.setEmail(email);
+			student.setPhoneNumber(phoneNumber);
+			student.setSubject(subject);
+			
+			listOfStudent.add(student);
+		}
+		
+		return listOfStudent;
+		
 	}
 	
 
